@@ -1,5 +1,5 @@
-title:            Hoon's blah-blah-blah
-description:      "java", "framework", "javascript", "html5", "oracle", "mysql", "nosql", "etc....."
+title: "Hoon's blah-blah-blah"
+description: "java, framework, javascript, html5, oracle, mysql, nosql, etc....."
 disqus_shortname: tiramisu79
 reading_time:     true
 words_per_minute: 200
@@ -9,36 +9,36 @@ url: http://tiramisu79.umask.io/
 
 # Owner/author information
 owner:
-  name:           tiramisu79
-  avatar:         https://s.gravatar.com/avatar/623c399bb487091568a1e159d3def300
-  bio:            "Developer"
-  email:          tiramisu79@gmail.com
+  name: tiramisu79
+  avatar: https://s.gravatar.com/avatar/623c399bb487091568a1e159d3def300
+  bio: "Developer"
+  email: tiramisu79@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter: tiramisu79
-  facebook:       
+  facebook:
   github: tiramisu79
   stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
+  linkedin:
+  instagram:
+  flickr:
+  tumblr:
   # google plus id, include the '+', eg +mmistakes
   google_plus: +tiramisu79
 
 # Background image to be tiled on all pages
-background: 
+background:
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-81244377-1
 google_verify: cwnY320EUkIV870ikimgKuB1LKAEW4LFmVUOB0D9DW4
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Seoul
-future:      true
+timezone: Asia/Seoul
+future: true
 highlighter: rouge
-markdown:    kramdown
+markdown: kramdown
 gems:
   - jekyll-sitemap
   - jekyll-paginate
@@ -49,7 +49,7 @@ sass:
   style: compressed
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+permalink: /:categories/:title/
 
 # Amount of post to show on home page
 paginate: 5
