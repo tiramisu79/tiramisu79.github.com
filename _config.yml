@@ -17,7 +17,7 @@ owner:
   twitter: tiramisu79
   facebook:
   github: tiramisu79
-  stackexchange:  
+  stackexchange:
   linkedin:
   instagram:
   flickr:
@@ -62,9 +62,9 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
-include: 
+include:
   - .htaccess
-exclude: 
+exclude:
   - "*.less"
   - "*.sublime-project"
   - "*.sublime-workspace"
