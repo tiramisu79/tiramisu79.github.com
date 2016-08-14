@@ -9,6 +9,8 @@ tags: [Java, OpenJDK]
 혹시 저와 같은 환경에서 빌드해야 할 경우 도움이 되면 좋겠습니다.
 
 # OpenJDK 7 바이너리 생성
+
+## 개요
 * Mac OS X El Capitan에서 OpenJDK 7 빌드 시 필요한 내용을 정리합니다.
 
 ## 필수 구성 요소 사전 설치
