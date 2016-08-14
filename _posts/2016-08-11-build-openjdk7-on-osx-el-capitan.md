@@ -52,6 +52,7 @@ tags: [Java, OpenJDK]
 * Env.sh 파일을 생성하여 다음 내용을 추가합니다.
 * FreeType 관련 항목, ALT_OUTPUTDIR, ANT_HOME 값은 로컬 PC에 설치된 정보에 따라 수정합니다.
 * 파일 생성 후 source ./Env.sh 실행
+
   ```
   export LANG=C
 
@@ -109,6 +110,7 @@ tags: [Java, OpenJDK]
 * 한글 Mac에서 빌드하는 경우 javac의 encoding 문제로 인해 corba project를 빌드하다가 에러가 발생하는데 다음을 참고합니다.
   * error 내용 : "unmappable character for encoding ascii"
   * corba/make/common/shared/Defs-java.gmk 파일을 수정합니다.
+
     ```
     JAVACFLAGS  += -encoding ascii -&gt; JAVACFLAGS  += -encoding ms949
     ```
@@ -116,6 +118,7 @@ tags: [Java, OpenJDK]
   * error 내용 : clang: error: unknown argument: '-fpch-deps'
   * hotspot/make/bsd/makefiles/gcc.make 파일을 수정합니다.
     * line 216
+
       ```
       # Flags for generating make dependency flags.
       #ifneq ("${CC_VER_MAJOR}", "2")
@@ -131,6 +134,7 @@ tags: [Java, OpenJDK]
       ```
 * 기본 파라미터 값으로 인한 에러가 발생하면 다음을 참고합니다.
   * error 내용
+
     ```
     ${OpenJDK7}/hotspot/src/share/vm/code/relocInfo.hpp:374:27: error: friend declaration specifying a default argument must be a definition
       inline friend relocInfo prefix_relocInfo(int datalen = 0);
@@ -140,6 +144,7 @@ tags: [Java, OpenJDK]
     ```
   * hotspot/src/share/vm/code/relocInfo.hpp 파일을 수정합니다.
     * line 374
+
       ```
       [수정 전]
       inline friend relocInfo prefix_relocInfo(int datalen = 0);
@@ -148,6 +153,7 @@ tags: [Java, OpenJDK]
       inline friend relocInfo prefix_relocInfo(int datalen);
       ```
   * error 내용
+
     ```
     ${OpenJDK7}/hotspot/src/share/vm/code/relocInfo.hpp:470:21: error: 'fits_into_immediate' is a protected member of 'relocInfo'
       assert(relocInfo::fits_into_immediate(datalen), "datalen in limits");
@@ -160,6 +166,7 @@ tags: [Java, OpenJDK]
     ```
   * hotspot/src/share/vm/code/relocInfo.hpp 파일을 수정합니다.
     * line 469
+
       ```
       [수정 전]
       inline relocInfo prefix_relocInfo(int datalen) {
@@ -169,6 +176,7 @@ tags: [Java, OpenJDK]
       ```
 * clang linker command failed 에러가 발생하면 다음을 참고합니다.
   * error 내용
+
     ```
     Undefined symbols for architecture x86_64:
     "_attachCurrentThread", referenced from:
@@ -179,6 +187,7 @@ tags: [Java, OpenJDK]
     ```
   * jdk/src/macosx/native/sun/osxapp/ThreadUtilities.m 파일을 수정합니다.
     * line 38
+
       ```
       [수정 전]
       inline void attachCurrentThread(void** env) {
@@ -219,6 +228,7 @@ tags: [Java, OpenJDK]
 ## 확인
 * ./build-debug/bin/java -version
 * 버전 정보를 확인합니다.
+
   ```
   openjdk version "1.7.0-internal-debug"
   OpenJDK Runtime Environment (build 1.7.0-internal-debug-b00)
